@@ -130,7 +130,17 @@ public class JsonSerializer implements ISerializer {
      * @return target object
      */
     public <T> T from(Object obj, Class<T> type) {
-        return gson.fromJson(gson.toJsonTree(obj), type);
+        return gson.fromJson(toTree(obj), type);
+    }
+
+    /**
+     * Convert object to tree
+     *
+     * @param obj object to convert
+     * @return json element
+     */
+    public JsonElement toTree(Object obj) {
+        return gson.toJsonTree(obj);
     }
 
 }

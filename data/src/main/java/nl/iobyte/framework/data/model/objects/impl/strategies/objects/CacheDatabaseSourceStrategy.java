@@ -10,7 +10,6 @@ import nl.iobyte.framework.data.model.objects.impl.database.objects.source.Model
 import java.util.Map;
 import java.util.function.Supplier;
 
-//TODO Add save/get strategy when to use cache and when to bypass for consistency
 public class CacheDatabaseSourceStrategy<T extends IModel> implements IModelSourceStrategy<T> {
 
     private final CacheModelSource<T> cacheSource;
