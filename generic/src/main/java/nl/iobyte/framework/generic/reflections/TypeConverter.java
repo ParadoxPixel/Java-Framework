@@ -7,6 +7,7 @@ import nl.iobyte.framework.generic.serializer.SerializerService;
 import nl.iobyte.framework.generic.serializer.objects.JsonSerializer;
 
 import java.util.Optional;
+import java.util.UUID;
 
 public class TypeConverter {
 
@@ -55,6 +56,10 @@ public class TypeConverter {
         if(obj instanceof byte[] bytes)
             obj = new String(bytes);
 
+        if(obj instanceof UUID uuid)
+            if(String.class.isAssignableFrom(type))
+                return uuid.toString();
+
         if(obj instanceof String str) {
             if(Character.class.equals(type))
                 return str.charAt(0);
@@ -64,6 +69,9 @@ public class TypeConverter {
 
             if(Number.class.isAssignableFrom(type))
                 obj = new LazilyParsedNumber(str);
+
+            if(UUID.class.isAssignableFrom(type))
+                return UUID.fromString(str);
         }
 
         if(obj instanceof Number number) {

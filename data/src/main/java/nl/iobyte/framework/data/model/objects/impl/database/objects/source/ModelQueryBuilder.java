@@ -9,6 +9,7 @@ import nl.iobyte.framework.structures.pmap.PairMap;
 
 import java.util.*;
 
+@SuppressWarnings("UnusedReturnValue")
 public class ModelQueryBuilder<T extends IModel> {
 
     private final ModelWrapper<T> wrapper;

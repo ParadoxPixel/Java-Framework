@@ -17,6 +17,8 @@ import nl.iobyte.framework.rest.validator.objects.impl.reference.annotations.Inj
 import nl.iobyte.framework.rest.validator.objects.impl.reference.annotations.ReferenceRule;
 import nl.iobyte.framework.rest.validator.objects.impl.reference.handlers.InjectReferenceValidatorAnnotationFieldHandler;
 import nl.iobyte.framework.rest.validator.objects.impl.reference.handlers.ReferenceValidatorAnnotationFieldHandler;
+import nl.iobyte.framework.rest.validator.objects.impl.string.annotations.StringCaseRule;
+import nl.iobyte.framework.rest.validator.objects.impl.string.handlers.StringCaseValidatorAnnotationFieldHandler;
 import nl.iobyte.framework.rest.validator.objects.impl.validate.ValidateValidatorAnnotationFieldHandler;
 import nl.iobyte.framework.structures.omap.ObjectMap;
 import nl.iobyte.framework.structures.reflected.ReflectedMap;
@@ -47,10 +49,10 @@ public class ValidatorService extends ObjectMap<Class<?>, Validator<?>> implemen
         on(FloatRangeRule.class, new FloatRangeValidatorAnnotationFieldHandler());
         on(IntRangeRule.class, new IntRangeValidatorAnnotationFieldHandler());
         on(LongRangeRule.class, new LongRangeValidatorAnnotationFieldHandler());
+        on(StringRangeRule.class, new StringRangeValidatorAnnotationFieldHandler());
 
         //Register string annotations
-        on(StringRangeRule.class, new StringRangeValidatorAnnotationFieldHandler());
-        on(NotEmptyRule.class, new NotEmptyValidatorAnnotationFieldHandler());
+        on(StringCaseRule.class, new StringCaseValidatorAnnotationFieldHandler());
 
         //Register map annotations
         on(MapRule.class, new MapValidatorAnnotationFieldHandler());
@@ -61,6 +63,7 @@ public class ValidatorService extends ObjectMap<Class<?>, Validator<?>> implemen
 
         //Register object annotations
         on(Validate.class, new ValidateValidatorAnnotationFieldHandler());
+        on(NotEmptyRule.class, new NotEmptyValidatorAnnotationFieldHandler());
     }
 
     /**

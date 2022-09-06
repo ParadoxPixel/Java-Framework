@@ -8,6 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@SuppressWarnings("UnusedReturnValue")
 public class ReflectedBuilder<T> {
 
     private final ReflectedType<T> type;

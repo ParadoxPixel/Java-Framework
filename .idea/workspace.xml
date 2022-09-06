@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55317061-331f-43c2-99cb-643b6a5797b0" name="Changes" comment="Initial Commit">
+    <list default="true" id="55317061-331f-43c2-99cb-643b6a5797b0" name="Changes" comment="CHG: remove unneeded TODO&#10;CHG: make TypeConverter.normalise use JsonConverter if available else default to internal gson instance">
+      <change afterPath="$PROJECT_DIR$/restapi/src/main/java/nl/iobyte/framework/rest/validator/objects/impl/string/annotations/StringCaseRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restapi/src/main/java/nl/iobyte/framework/rest/validator/objects/impl/string/enums/StringCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restapi/src/main/java/nl/iobyte/framework/rest/validator/objects/impl/string/handlers/StringCaseValidatorAnnotationFieldHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restapi/src/test/java/nl/iobyte/validator/StringCaseRuleValidationRuleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/nl/iobyte/framework/data/model/objects/impl/strategies/objects/CacheDatabaseSourceStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/nl/iobyte/framework/data/model/objects/impl/strategies/objects/CacheDatabaseSourceStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/nl/iobyte/framework/data/model/objects/impl/database/objects/source/ModelQueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/nl/iobyte/framework/data/model/objects/impl/database/objects/source/ModelQueryBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generic/src/main/java/nl/iobyte/framework/generic/reflections/TypeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/generic/src/main/java/nl/iobyte/framework/generic/reflections/TypeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generic/src/main/java/nl/iobyte/framework/generic/serializer/objects/JsonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/generic/src/main/java/nl/iobyte/framework/generic/serializer/objects/JsonSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generic/src/main/java/nl/iobyte/framework/generic/reflections/builders/ReflectedBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/generic/src/main/java/nl/iobyte/framework/generic/reflections/builders/ReflectedBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restapi/src/main/java/nl/iobyte/framework/rest/validator/ValidatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restapi/src/main/java/nl/iobyte/framework/rest/validator/ValidatorService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +23,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -45,16 +50,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "/Users/thomas/IdeaProjects/framework/restapi/src/test/java",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/thomas/IdeaProjects/framework/restapi/src/test/java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/restapi/src/test/java" />
@@ -68,10 +73,10 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="nl.iobyte.validator" />
+      <recent name="nl.iobyte.framework.rest.validator.objects.impl.string.handlers" />
+      <recent name="nl.iobyte.framework.rest.validator.objects.impl.string.annotations" />
       <recent name="nl.iobyte.framework.rest.validator.objects.impl.reference.handlers" />
       <recent name="nl.iobyte.framework.rest.validator.objects.impl.reference.annotations" />
-      <recent name="nl.iobyte.framework.rest.validator.objects.impl.reference" />
-      <recent name="nl.iobyte.framework.rest.validator.objects.impl.map" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.framework [clean,package]">
@@ -136,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660238865897</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="CHG: remove unneeded TODO&#10;CHG: make TypeConverter.normalise use JsonConverter if available else default to internal gson instance">
+      <created>1660239283532</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660239283532</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +165,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="CHG: remove unneeded TODO&#10;CHG: make TypeConverter.normalise use JsonConverter if available else default to internal gson instance" />
+    <option name="LAST_COMMIT_MESSAGE" value="CHG: remove unneeded TODO&#10;CHG: make TypeConverter.normalise use JsonConverter if available else default to internal gson instance" />
   </component>
 </project>
